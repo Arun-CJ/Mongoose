@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "796a7c4d-793d-4beb-9cd0-d44d77287645",
+		"name": "mongosession",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "first req",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6666/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDc3MDI1ZjM0YjVkNjMzNDhjNzM0Y2YiLCJpYXQiOjE2MjY0MTc0MDY1MzksImV4cCI6MTYyOTAwOTQ1MX0.4NiuTvZmAMRqCgBR0AXaOx9jNHJyqEsaJzsfBprMduI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"arya\",\r\n    \"age\":35,\r\n    \"email\":\"arysasa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6666/adduser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all user data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6666/getallusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"getallusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single user info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6666/getuser/60f64526ac8aa41954a72b11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"getuser",
+						"60f64526ac8aa41954a72b11"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "60f64526ac8aa41954a72b11",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"60f646b041277e3290eea12a\",\r\n    \"age\": 59\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6666/updateuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"updateuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"userId\":\"60f64526ac8aa41954a72b11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6666/deleteuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"deleteuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add posts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"60f7927519a3af0c58d533b5\",\r\n    \"post\":\"Second post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6666/addposts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"addposts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6666/getallposts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"getallposts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
